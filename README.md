@@ -31,6 +31,7 @@ is a very useful resource.
 | timeout       | optional      | `number`  | The timeout while making Github API requests. |
 | proxy         | optional      | `object`  | Has the `host` (required) and `port` (default: `3128`) keys. The API requests will be made to this server. If the `proxy` option is missing, the following API endpoint is considered: `host`: `api.github.com`, port: depending on the `protocol`: `443` (for `https`) or `80` (for `http`). |
 | protocol      | optional      | `string`  | What protocol to user for the API requsts. Default: `https` |
+| headers       | optional      | `object`  | Custom headers to send in the API requests. |
 | debug         | options       | `boolean` | Enable or disable debug output. Default: `false` |
 
 ## Example

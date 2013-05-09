@@ -621,6 +621,10 @@ var Client = module.exports = function(config) {
             "user-agent": "NodeJS HTTP Client",
             "content-length": "0"
         };
+
+        for (var header in this.config.headers)
+            headers[header] = this.config.headers[header];
+
         if (hasBody) {
             if (format == "json")
                 query = JSON.stringify(query);
