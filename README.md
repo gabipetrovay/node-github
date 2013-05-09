@@ -23,6 +23,16 @@ You can find the docs for the API of this client at [http://ajaxorg.github.com/n
 Additionally, the [official Github documentation](http://developer.github.com/)
 is a very useful resource.
 
+## Client Configuration Options
+
+| Option        | Required      | Type      | Description |
+| ------------- |:-------------:| ---------:| -----:| -----------:|
+| version       | required      | `string`  | What Github API version to use. Currently only `3.0.0` is supported. |
+| timeout       | optional      | `number`  | The timeout while making Github API requests. |
+| proxy         | optional      | `object`  | Has the `host` (required) and `port` (default: `3128`) keys. The API requests will be made to this server. If the `proxy` option is missing, the following API endpoint is considered: `host`: `api.github.com`, port: depending on the `protocol`: `443` (for `https`) or `80` (for `http`). |
+| protocol      | optional      | `string`  | What protocol to user for the API requsts. Default: `https` |
+| debug         | options       | `boolean` | Enable or disable debug output. Default: `false` |
+
 ## Example
 
 Print all followers of the user "mikedeboer" to the console.
